@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        let n = 30;
+        let sum = 0;
+        let prod = BigInt(1);
+        let nums = "";
+
+        for (let i = 1; i <= n; i++) {
+        nums += i + (i === n ? "" : ", ");
+        sum += i;
+        prod *= BigInt(i);
+        }
+
+        document.write("<p>" + nums + "</p>");
+        document.write("<p>1 + ... + " + n + " = " + sum + "</p>");
+        document.write("<p>1 * ... * " + n + " = " + prod.toString() + "</p>");
+    </script>
+</body>
+</html>

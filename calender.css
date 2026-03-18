@@ -1,0 +1,30 @@
+.calendar-table {
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+}
+
+.calendar-table th, 
+.calendar-table td {
+    width: 60px;    
+    height: 60px;     
+    text-align: center;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.calendar-table th {
+    background-color: #f8f9fa;
+    color: #360808;
+    font-weight: bold;
+}
+
+.calendar-table td:empty {
+    background-color: #fcfcfc;
+}
+
+.today {
+    background-color: #ddd7d7;
+    color: #ff03c0;
+    font-weight: bold;
+}

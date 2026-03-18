@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("n 입력 (100 이하):"));
+
+        if (n > 0 && n <= 100) {
+        let f = [0n, 1n, 1n];
+        document.write("<table><tr><th>i</th><th>fi</th><th>fi+1 / fi</th></tr>");
+
+        for (let i = 1; i <= n; i++) {
+        if (!f[i+1]) f[i+1] = f[i] + f[i-1];
+        f[i+2] = f[i+1] + f[i];
+
+        let ratio = Number(f[i+1]) / Number(f[i]);
+
+        document.write("<tr>");
+        document.write("<td>" + i + "</td>");
+        document.write("<td>" + f[i].toString() + "</td>");
+        document.write("<td>" + ratio.toFixed(6) + "</td>");
+        document.write("</tr>");
+        }
+        document.write("</table>");
+        }
+    </script>
+</body>
+</html>
